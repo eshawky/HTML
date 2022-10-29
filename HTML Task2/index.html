@@ -1,0 +1,141 @@
+<html>
+<head>
+        <title>
+            Task2 in HTML
+        </title>
+
+        <link rel="icon" type="image/x-icon" href="Images/animal.png">
+        <link rel="stylesheet" href="style.css">
+
+        <script>
+
+            function onChange()
+            {
+                const password = document.querySelector('input[name=pass]');
+                const confirm  = document.querySelector('input[name=passmatch]');
+                
+                if (confirm.value === password.value) 
+                {
+                    confirm.setCustomValidity('');
+                
+                } else 
+                {
+                    confirm.setCustomValidity('Passwords do not match');
+                }
+            }
+
+        </script>
+
+</head>
+
+<body>
+
+        <form action="index2.html" method="post" id="form" name="form" >  
+
+            <table>
+                <tr>
+                    <th colspan=2>
+                        Registeration Form
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="fname">First Name</label>
+                    </td>
+                    <td>
+                            
+                        <input type="text" id="fname" name="fname" placeholder="enter your first name" size="50" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="lname">Last Name</label>
+                    </td>
+                    <td>
+                            
+                        <input type="text" id="lname" name="lname" placeholder="enter your last name" size="50" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="uname">User Name</label>
+                    </td>
+                    <td>
+                            
+                        <input type="text" id="uname" name="uname" placeholder="enter your user name" size="50" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email"> E-Mail </label>
+                    </td>
+                    <td>
+                            
+                        <input type="email" id="email" name="email" placeholder="enter your email" size="50" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="pass">Pass</label>
+                    </td>
+                    <td>
+                            
+                        <input type="password" id="pass" name="pass" placeholder="enter your password" size="50" required onChange="onChange()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="passmatch">Password Match</label>
+                    </td>
+                    <td>
+                            
+                        <input type="password" id="passmatch" name="passmatch" placeholder="enter your password again" size="50" required onChange="onChange()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="track">Track</label>
+                    </td>
+                    <td>
+                        <select id="track" name="track">
+                            <option value="OS">       OS      </option>
+                            <option value="Embedded"> Embedded</option>
+                            <option value="Web">       Web    </option>
+                            <option value="Mobile">    Mobile </option>                            
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Gender</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="female" name="gender" required> Female
+                        <input type="radio" id="male" name="gender" required> Male                    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Description</label>
+                    </td>
+                    <td>
+                        <textarea id="area" name="area" size="50" required> 
+
+                        </textarea>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=2>
+                        <input type="submit" id="submit" name="submit" value="register">
+                        <input type="reset" id="reset" name="reset" value="reset">
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+    
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+#form 
+{
+    font-family: sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#form td, #form th 
+{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#form tr:nth-child(even)
+{
+    background-color: #f2f2f2;
+}
+
+#form tr:hover 
+{
+    background-color: #ddd;
+}
+
+#form th 
+{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #04AA6D;
+    color: white;
+}
